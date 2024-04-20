@@ -23,4 +23,4 @@ PieChart(positions).make()
 
 produces the following image:
 
-![Two level pie chart](example.png.)
+![Two level pie chart](example.png)
