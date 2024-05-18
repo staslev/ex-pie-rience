@@ -2,6 +2,7 @@ import math
 import random
 from collections import OrderedDict
 from dataclasses import dataclass
+from typing import List
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -15,9 +16,9 @@ class Position:
 
 
 class PieChart:
-    positions: list[Position]
+    positions: List[Position]
 
-    def __init__(self, positions: list[Position]):
+    def __init__(self, positions: List[Position]):
         self.positions = positions
         self.yoe_by_type = self._group_by_type(self.positions)
 
@@ -32,7 +33,7 @@ class PieChart:
             random.shuffle(colors)
             return colors
 
-    def _group_by_type(self, positions: list[Position]):
+    def _group_by_type(self, positions: List[Position]):
         class DefaultOrderedDict(OrderedDict):
             def __init__(self, *args, **kwargs):
                 super().__init__(*args, **kwargs)
